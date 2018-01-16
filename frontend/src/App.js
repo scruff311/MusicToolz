@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import Home from './components/Home';
+import Builder from './components/Builder';
+import Results from './components/Results';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Django</h1>
-        </header>
-        <p className="App-intro">
-            A React app with a Django backend
-        </p>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/builder" component={Builder} />
+        <Route exact path="/builder/results" component={Results} />
       </div>
     );
   }

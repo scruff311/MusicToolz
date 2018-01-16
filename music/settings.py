@@ -60,7 +60,7 @@ ROOT_URLCONF = 'music.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/public'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,15 +119,20 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     #This lets Django's collectstatic store our bundles
-    os.path.join(BASE_DIR, 'frontend/build/static'), 
+    os.path.join(BASE_DIR, 'frontend/build'), 
 )
 
 # Webpack
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        # 'BUNDLE_DIR_NAME': 'frontend/build/static/js',
-        'BUNDLE_DIR_NAME':  os.path.join(BASE_DIR, 'js/'),
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
     }
 }
+
+if not DEBUG:
+    WEBPACK_LOADER['DEFAULT'].update({
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json')
+        })
