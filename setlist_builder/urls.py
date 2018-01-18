@@ -10,5 +10,5 @@ urlpatterns = [
     # url(r'^results/(?P<result>[^/]+)/$', views.results, name='results'),
     # url(r'^results/$', views.results, name='results'),
     # url(r'^generate/$', views.generate, name='generate'),
-    url(r'^init/$', views.test, name='test'),
+    url(r'^init/$', views.index, name='index'),
 ]

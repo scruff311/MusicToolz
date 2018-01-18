@@ -62,7 +62,7 @@ module.exports = {
       // on all css files
       {
         test: /\.css$/,
-        use: 'style-loader!css-loader',
+        loader: 'style-loader!css-loader',
       },
       {
         test: /\.scss$/,
@@ -70,15 +70,15 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        use: 'url-loader?limit=100000',
+        loader: 'url-loader?limit=100000',
       },
       {
         test: /\.jpg$/,
-        use: 'file-loader',
+        loader: 'file-loader',
       },
       {
         test: /\.png$/,
-        use: 'url-loader?limit=100000',
+        loader: 'url-loader?limit=100000',
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,

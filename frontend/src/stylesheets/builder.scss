@@ -1,0 +1,26 @@
+div.slider-horizontal {
+  display: inline-flex;
+
+  .rangeslider-horizontal {
+    width: 200px;
+    height: 6px;
+    border-radius: 4px;
+    bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .rangeslider__fill {
+    background-color: rgb(27, 85, 194);
+  }
+  .rangeslider__handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #333;
+
+      &:after {
+        height: 0px;
+      }
+  }
+}

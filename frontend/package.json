@@ -32,8 +32,12 @@
     "webpack-bundle-tracker": "0.0.93"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "react-bootstrap": "^0.30.7",
-    "react-router-dom": "^4.2.2"
+    "bootstrap": "^4.0.0",
+    "react-rangeslider": "^2.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^4.8.0",
+    "redux": "^3.7.2"
   }
 }
